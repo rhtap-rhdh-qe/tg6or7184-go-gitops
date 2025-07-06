@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: tg6or7184-go
+  janus-idp.io/tekton: tg6or7184-go
+  backstage.io/kubernetes-id: tg6or7184-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: tg6or7184-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
